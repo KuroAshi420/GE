@@ -16,6 +16,8 @@
     <link href="assets/css/demo.css" rel="stylesheet" />
     <link href="assets/css/landing.css" rel="stylesheet" />
     <link href="assets/css/split.css" rel="stylesheet" />
+    <link href="assets/css/ventes.css">
+    <script src="assets/js/jquery.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="100">
@@ -274,6 +276,7 @@
             </div>
         </div>
     </div>
+
     <div class="section text-center" style="background:#f3f3f3;">
         <div class="container">
             <div class="row mb-5">
@@ -406,6 +409,90 @@
                
             </div>
         </div>
+    </div>
+    <div class="section text-center" style="background:#f3f3f3;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <h2 class="title">Reférence de <span class="text-bluec">Vente</span></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <a  class="btn btn-info" id="tous">Tous</a>
+                </div>
+                <div class="col-md-3">
+                    <a    id="national">National</a>
+                </div>
+                <div class="col-md-3">
+                    <a   id="international">International</a>
+                </div>
+            </div>
+
+            <div class="row"  id="tousP">
+                <div class="col-md-3">
+                        <img src="assets/img/inter.png" style="object-fit: cover;width: 100%;" height="340" alt="">
+                    </div>
+                <div class="col-md-3">
+                        <img src="assets/img/nat.png" style="object-fit: cover;width: 100%;" height="340" alt="">
+                    </div>
+                <div class="col-md-3">
+                    <img src="assets/img/inter.png" style="object-fit: cover;width: 100%;" height="340" alt="">
+                </div>
+            </div>
+            <div class="row" style="display: none" id="natP">
+                <div class="col-md-3">
+                    <img src="assets/img/nat.png" style="object-fit: cover;width: 100%;" height="340" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="assets/img/nat.png" style="object-fit: cover;width: 100%;" height="340" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="assets/img/nat.png" style="object-fit: cover;width: 100%;" height="340" alt="">
+                </div>
+            </div>
+            <div class="row" style="display: none" id="interP">
+                <div class="col-md-3">
+                    <img src="assets/img/inter.png" style="object-fit: cover;width: 100%;" height="340" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="assets/img/inter.png" style="object-fit: cover;width: 100%;" height="340" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="assets/img/inter.png" style="object-fit: cover;width: 100%;" height="340" alt="">
+                </div>
+            </div>
+
+        </div>
+        <script>
+            $(document).ready(function (){
+                $("#tous").click(function (){
+                    $("#tous").addClass('btn btn-info');
+                    $("#international").removeClass('btn btn-info');
+                    $("#national").removeClass('btn btn-info');
+                    $("#tousP").show();
+                    $("#natP").hide();
+                    $("#interP").hide();
+
+                });
+                $("#international").click(function (){
+                    $("#international").addClass('btn btn-info');
+                    $("#tous").removeClass('btn btn-info');
+                    $("#national").removeClass('btn btn-info');
+                    $("#tousP").hide();
+                    $("#natP").hide();
+                    $("#interP").show();
+                });
+                $("#national").click(function (){
+                    $("#national").addClass('btn btn-info');
+                    $("#international").removeClass('btn btn-info');
+                    $("#tous").removeClass('btn btn-info');
+                    $("#tousP").hide();
+                    $("#natP").show();
+                    $("#interP").hide();
+                });
+            })
+        </script>
     </div>
     <div class="section text-center">
         <div class="container">
@@ -660,12 +747,13 @@
     resizeObserverB.observe(elemB);
 
 </script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 		<script type="text/javascript" src="js/jquery.hislide.js" ></script>
 		<script>
 			$('.slide').hiSlide();
 		</script>
 <!--  Google Maps Plugin    -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
 </body>
 </html>
