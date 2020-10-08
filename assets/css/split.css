@@ -317,11 +317,57 @@ height: 250px;
 }
 
 .reference-client{
-	border: 1px black solid;
-	height: 300px;
+	height: 350px;
 }
+
 
 .reference-client-container{
 	display: flex;
-	justify-content: space-between !important;
+	justify-content: space-around !important;
 }
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgba(126, 157, 43, 0.6);
+  }
+  
+  .reference-client:hover .overlay {
+	opacity: 1;
+  }
+  
+  .text {
+	color: white;
+	font-size: 20px;
+	font-weight: 400;
+	position: relative;
+	top: 15%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+  .ref-client-btn{
+	  border: 2px solid white;
+	  width: 45px;
+	  height: 45px;
+	  position: absolute;
+	  background-color: transparent;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	border-radius: 10px;
+  }
+  .svg-btn-ref{
+	  color: white;
+  }

@@ -81,9 +81,9 @@
     -webkit-transition:.5s;
     transition:.5s;
 }
-// ::ng-deep body > app-root > app-landing > div.page-header > div.container > div > div.col-6.cadre-header.p-0 > div > ngb-carousel > a.carousel-control-next{
-   //     background-color: #27b9d5;
-   // }
+ ::ng-deep body > app-root > app-landing > div.page-header > div.container > div > div.col-6.cadre-header.p-0 > div > ngb-carousel > a.carousel-control-next{
+  background-color: #27b9d5;
+ }
 ::ng-deep.carousel-inner {
     position: relative;
     width: 100%;
